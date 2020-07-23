@@ -1,0 +1,17 @@
+.student {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  overflow: auto;
+}
+
+@media(max-width:500px){
+  .student{
+    display: block;
+
+    
+  }
+}

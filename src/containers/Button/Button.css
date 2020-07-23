@@ -1,0 +1,17 @@
+button {
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 2px 3px 5px grey;
+  padding: 10px 16px;
+  margin: 16px;
+  border-radius: 5px;
+}
+
+.success {
+  background-color: green;
+}
+.danger {
+  background-color: red;
+}

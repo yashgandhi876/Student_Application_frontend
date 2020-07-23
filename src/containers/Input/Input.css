@@ -1,0 +1,14 @@
+.Input {
+  margin: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 300px;
+}
+
+@media (max-width: 700px) {
+  .Input {
+    width: 250px;
+  }
+}

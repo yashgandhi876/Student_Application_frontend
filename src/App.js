@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Button from "./containers/Button/Button";
+import Model from "./containers/Model/Model";
+import ShowStudents from "./containers/ShowStudents/ShowStudents";
 
 function App() {
+  const [showModel, setShowModel] = useState(false);
+
+  const addStudentHandler = () => {
+    setShowModel(true);
+  };
+  const cancelHandler = () => {
+    setShowModel(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showModel && <Model cancel={() => cancelHandler()} />}
+      <div className="Model">
+        <Button
+          click={() => addStudentHandler()}
+          classname="success"
+          name="Add Student"
+        />
+      </div>
+      <div className="showstudents">
+        <ShowStudents />
+      </div>
     </div>
   );
 }
